@@ -1,0 +1,7 @@
+node_modules
+help.txt
+cypress/results
+mochawesome.json
+mochawesome-report
+key.txt
+integration

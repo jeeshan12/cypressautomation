@@ -1,0 +1,16 @@
+{
+    "integrationFolder" :"cypress/specs",
+    "video": false,
+    "screenshotOnRunFailure":true,
+    "retries":{
+        "runMode": 2
+    },
+    "reporter": "mochawesome",
+    "projectId": "mxirqs",
+    "reporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+}
