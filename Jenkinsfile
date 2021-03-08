@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment{
+        RECORD_KEY = credentials('CYPRESS_RECORD_KEY');
+    }
     stages{
         stage("Building Image"){
             steps{
@@ -11,7 +14,7 @@ pipeline{
             steps{
                 sh """
                     docker run --env \
-                    CYPRESS_RECORD_KEY=8dee2634-59bc-4588-acfc-6d8ed73a92b9 \
+                    CYPRESS_RECORD_KEY=$RECORD_KEY \
                     --rm \
                     cypress/dragon12 run test:dashboard
                     """
